@@ -1,4 +1,5 @@
 📘 **README: Reddit Data Pipeline using AWS**
+
 📌 **Project Overview**
 This project is a Reddit data pipeline built using AWS to extract posts and comments from subreddits, clean and store them in a PostgreSQL RDS database, and prepare them for trend analysis.
 
