@@ -1,12 +1,12 @@
-📘 README: Reddit Data Pipeline using AWS
-📌 Project Overview
+📘 **README: Reddit Data Pipeline using AWS**
+📌 **Project Overview**
 This project is a Reddit data pipeline built using AWS to extract posts and comments from subreddits, clean and store them in a PostgreSQL RDS database, and prepare them for trend analysis.
 
 The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW API. It was designed to be cost-effective, scalable, and suitable for a real-time data engineering portfolio.
 
 🚧 Although dashboards were planned using Metabase, AWS costs (EC2, NAT Gateway) led to the dashboard phase being skipped.
 
-🚀 Features
+🚀 **Features**
 ⏰ Automated ETL: Scheduled extraction using AWS Lambda + EventBridge
 
 🐍 PRAW API Integration: Python wrapper for Reddit
@@ -21,7 +21,7 @@ The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW AP
 
 🌐 Infrastructure manually provisioned via AWS Console
 
-🔧 Tech Stack
+🔧 **Tech Stack**
 | Layer         | Tools & Services                                          |
 | ------------- | --------------------------------------------------------- |
 | Language      | Python, SQL                                               |
@@ -31,8 +31,8 @@ The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW AP
 | Visualization | Metabase (planned, not completed)                         |
 
 
-📊 Database Schema
-📌 Table: reddit_posts
+📊 **Database Schema**
+📌 **Table: reddit_posts**
 | Field                 | Type                    | Description           |
 | --------------------- | ----------------------- | --------------------- |
 | post\_id              | varchar(20) (PK)        | Unique Reddit post ID |
@@ -49,7 +49,7 @@ The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW AP
 | last\_updated         | timestamp (default now) | Last update timestamp |
 
 
-📌 Table: reddit_comments
+📌 **Table: reddit_comments**
 | Field         | Type                    | Description           |
 | ------------- | ----------------------- | --------------------- |
 | comment\_id   | varchar(20) (PK)        | Comment ID            |
@@ -62,7 +62,7 @@ The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW AP
 | last\_updated | timestamp               | Last update timestamp |
 
 
-⚙️ How It Works
+⚙️ **How It Works**
 1. Scheduling
 AWS EventBridge rule runs every 6 hours
 
@@ -83,7 +83,7 @@ Data accessed and verified via pgAdmin4
 
 Metabase was intended for dashboards, but not completed due to EC2 cost
 
-🔒 IAM & Security
+🔒 **IAM & Security**
 A custom IAM Role was created for the Lambda function, granting access to:
 
 Lambda, RDS, CloudWatch, EC2
@@ -94,12 +94,12 @@ CloudWatch, Lambda, EC2, RDS, EventBridge, CLI/Programmatic Access
 
 RDS connection was configured to be outside the VPC, simplifying connectivity from services like Lambda and external tools (e.g., pgAdmin).
 
-📈 Visualization Plan (Optional)
+📈** Visualization Plan (Optional)**
 EC2 was used to host Metabase, connected to the RDS DB
 
 Due to rising AWS costs (IPv4 & EC2 charges), the instance was terminated before dashboarding began.
 
-💸 Cost Breakdown
+💸 **Cost Breakdown**
 Most services were under Free Tier
 
 Additional charges:
