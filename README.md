@@ -33,6 +33,7 @@ The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW AP
 
 
 📊 **Database Schema**
+
 📌 **Table: reddit_posts**
 | Field                 | Type                    | Description           |
 | --------------------- | ----------------------- | --------------------- |
