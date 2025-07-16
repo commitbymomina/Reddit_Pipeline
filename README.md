@@ -97,7 +97,8 @@ CloudWatch, Lambda, EC2, RDS, EventBridge, CLI/Programmatic Access
 
 RDS connection was configured to be outside the VPC, simplifying connectivity from services like Lambda and external tools (e.g., pgAdmin).
 
-📈** Visualization Plan (Optional)**
+📈 **Visualization Plan (Optional)**
+
 EC2 was used to host Metabase, connected to the RDS DB
 
 Due to rising AWS costs (IPv4 & EC2 charges), the instance was terminated before dashboarding began.
