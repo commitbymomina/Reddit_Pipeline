@@ -8,6 +8,7 @@ The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW AP
 🚧 Although dashboards were planned using Metabase, AWS costs (EC2, NAT Gateway) led to the dashboard phase being skipped.
 
 🚀 **Features**
+
 ⏰ Automated ETL: Scheduled extraction using AWS Lambda + EventBridge
 
 🐍 PRAW API Integration: Python wrapper for Reddit
