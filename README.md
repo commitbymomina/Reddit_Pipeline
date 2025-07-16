@@ -68,6 +68,8 @@ The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW AP
 | inserted\_at  | timestamp               | Insertion timestamp   |
 | last\_updated | timestamp               | Last update timestamp |
 
+🧠 **Architecture Diagram**
+<img width="1536" height="1024" alt="Architecture Diagram" src="https://github.com/user-attachments/assets/f9e18b40-c4ad-49d1-8895-1f2349af6452" />
 
 ⚙️ **How It Works**
 
