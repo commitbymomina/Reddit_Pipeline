@@ -1,6 +1,7 @@
 📘 **README: Reddit Data Pipeline using AWS**
 
 📌 **Project Overview**
+
 This project is a Reddit data pipeline built using AWS to extract posts and comments from subreddits, clean and store them in a PostgreSQL RDS database, and prepare them for trend analysis.
 
 The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW API. It was designed to be cost-effective, scalable, and suitable for a real-time data engineering portfolio.
@@ -24,6 +25,7 @@ The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW AP
 🌐 Infrastructure manually provisioned via AWS Console
 
 🔧 **Tech Stack**
+
 | Layer         | Tools & Services                                          |
 | ------------- | --------------------------------------------------------- |
 | Language      | Python, SQL                                               |
@@ -36,6 +38,7 @@ The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW AP
 📊 **Database Schema**
 
 📌 **Table: reddit_posts**
+
 | Field                 | Type                    | Description           |
 | --------------------- | ----------------------- | --------------------- |
 | post\_id              | varchar(20) (PK)        | Unique Reddit post ID |
@@ -53,6 +56,7 @@ The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW AP
 
 
 📌 **Table: reddit_comments**
+
 | Field         | Type                    | Description           |
 | ------------- | ----------------------- | --------------------- |
 | comment\_id   | varchar(20) (PK)        | Comment ID            |
@@ -66,6 +70,7 @@ The pipeline runs every 6 hours, fetching new data from Reddit using the PRAW AP
 
 
 ⚙️ **How It Works**
+
 1. Scheduling
 AWS EventBridge rule runs every 6 hours
 
@@ -87,6 +92,7 @@ Data accessed and verified via pgAdmin4
 Metabase was intended for dashboards, but not completed due to EC2 cost
 
 🔒 **IAM & Security**
+
 A custom IAM Role was created for the Lambda function, granting access to:
 
 Lambda, RDS, CloudWatch, EC2
@@ -104,6 +110,7 @@ EC2 was used to host Metabase, connected to the RDS DB
 Due to rising AWS costs (IPv4 & EC2 charges), the instance was terminated before dashboarding began.
 
 💸 **Cost Breakdown**
+
 Most services were under Free Tier
 
 Additional charges:
